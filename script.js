@@ -43,7 +43,7 @@ dialogCancel.addEventListener("click", () => {
 })
 
 dialogSubmit.addEventListener("click", () => {
-  
+  event.preventDefault()
   let title = document.querySelector("#title")
   let author = document.querySelector("#author")
   let pageCount = document.querySelector("#page_count")
