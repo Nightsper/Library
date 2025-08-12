@@ -12,43 +12,45 @@
   <h1>Library</h1>
   <button type="button" id="new_book_btn">New Book</button>
   
-  <div id="books">
+  <div id="library">
     
   </div>
   
   <dialog>
-    <form>
+    <form id="book_form">
       <h2>Book Info</h2>
       <p>
       <label for="title">Title:
-        <input type="text" id="title" />
+        <input type="text" id="title" required/>
       </label>
       </p>
       <p>
         <label for="author">Author:
-          <input type="text" id="author" />
+          <input type="text" id="author" required/>
         </label>
       </p>
       <p>
         <label for="page_count">Page Count:
-          <input type="number" id="page_count">
+          <input type="number" id="page_count" required>
         </label>
       </p>
       <p>
-      <fieldset>
-        <legend>Have you read the book?</legend>
+      <fieldset class="status_section">
+        <legend class="status_section">Have you read the book?</legend>
         <label for="yes">
-          <input type="radio" id="yes" name="read" value="Yes"/>
+          <input type="radio" id="yes" name="read" value="Yes" required/>
           Yes
         </label>
         <label for="no">
-          <input type="radio" id="no" name="read" value="No"/>
+          <input type="radio" id="no" name="read" value="No" required/>
           No
         </label>
       </fieldset>
       </p>
+      <p id="dialog_btn_section">
       <input type="button" id="cancel_btn" value="Cancel"/>
-      <input type="submit" id="submit_book_btn">
+      <input type="submit" id="submit_book_btn" value="Add Book">
+      </p>
     </form>
   </dialog>
   
