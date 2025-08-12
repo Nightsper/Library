@@ -187,11 +187,3 @@ formInputs.forEach(input => {
 }
   })
 })
-
-
-addBookToLibrary("Diary of a Wimpy Kid: No Brainer", "Jeff Kinney", "217", "No")
-
-addBookToLibrary("Harry Potter and the Deathly Hallows", "J. K. Rowling", "759", "No", )
-
-addBookToLibrary("Harry Potter and the Deathly Hallows", "J. K. Rowling", "759", "No", )
-addBookToLibrary("Harry Potter and the Deathly Hallows", "J. K. Rowling", "759", "No", )
