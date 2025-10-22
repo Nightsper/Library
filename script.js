@@ -54,7 +54,7 @@ function addBookToLibrary(title, author, pages, read) {
   readStatusBtn.id = "read_status_btn"
   
   removeBookBtn.textContent = "Remove"
-  readStatusBtn.textContent = "Read Status"
+  readStatusBtn.textContent = "Read Status Toggle"
   
   removeBookBtn.addEventListener("click", () => {
     bookCard.remove()
