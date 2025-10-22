@@ -21,18 +21,19 @@ let formInputs = Array.from(document.querySelectorAll("input")).reverse();
 let fieldset = document.querySelector("fieldset")
 
 
-function Book(title, author, pages, read) {
+class Book {
   
-  if (!new.target) {
-    throw Error("You must use the 'new' operator to call the constructor");
+  constructor(title, author, pages, read) {
+    
+    this.title = title
+    this.author = author
+    this.pages = pages
+    this.read = read
   }
   
-  this.title = title
-  this.author = author
-  this.pages = pages
-  this.read = read
-  this.info = function() {
+  info() {
     return `<b>Title:</b> ${this.title}<br> <b>Author:</b> ${this.author}<br> <b>Page Count:</b> ${this.pages}<br> <b>Read?</b> ${this.read}`
+    
   }
 }
 
@@ -120,13 +121,13 @@ function formCompletion() {
 
 function resetFormStyles() {
   formInputs.forEach(input => {
-  input.style.border = "2px solid #D3D3D3"
-  fieldset.style.border = "2px solid #9b9b9b"
-  fieldset.style.border = "1px solid #9b9b9b"
-  dialogSubmit.style.backgroundColor = "#efefef"
-  dialogSubmit.style.color = "black"
-
-})
+    input.style.border = "2px solid #D3D3D3"
+    fieldset.style.border = "2px solid #9b9b9b"
+    fieldset.style.border = "1px solid #9b9b9b"
+    dialogSubmit.style.backgroundColor = "#efefef"
+    dialogSubmit.style.color = "black"
+    
+  })
 }
 
 
@@ -182,8 +183,8 @@ formInputs.forEach(input => {
       dialogSubmit.style.color = "white"
     }
     else if (!formCompletion()) {
-  dialogSubmit.style.backgroundColor = "#efefef"
-  dialogSubmit.style.color = "black"
-}
+      dialogSubmit.style.backgroundColor = "#efefef"
+      dialogSubmit.style.color = "black"
+    }
   })
 })
